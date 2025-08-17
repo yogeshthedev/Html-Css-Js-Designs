@@ -1,0 +1,737 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bColor);
+    width: 100%;
+    height: 100%;
+}
+
+@font-face {
+    font-family: "cNedium";
+    src: url("assests/font-family/CalibreMedium.otf");
+}
+
+@font-face {
+
+    font-family: "cRegular";
+    src: url("assests/font-family/CalibreRegular.otf");
+}
+
+@font-face {
+    font-family: "cSemibold";
+    src: url("assests/font-family/CalibreSemibold.otf");
+}
+
+@font-face {
+    font-family: "sfMono";
+    src: url("assests/font-family/SFMono-Regular.otf");
+}
+
+@font-face {
+    font-family: "logo";
+    src: url("assests/font-family/JetBrainsMono-Medium.ttf");
+}
+
+:root {
+
+    --bColor: #0A192F;
+    --primary: rgb(100, 255, 218);
+    --namesecondary: #CCD6F6;
+    --secondary: rgb(136, 146, 176);
+    --card-color: #112240;
+
+}
+
+
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+p {
+    font-family: "cRegular";
+}
+
+h1 {
+    font-family: "cSemibold";
+}
+
+
+.navbar {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem 4rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 1px 0 0;
+    background-color: var(--bColor);
+    z-index: 1000;
+
+}
+
+.navbar .nav-items {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-family: "logo";
+    color: var(--primary);
+    letter-spacing: .02rem;
+    font-size: 1.2rem;
+}
+
+.nav-items .nav-item-count {
+    color: var(--primary);
+}
+
+
+.nav-items .nav-item-count a {
+    margin-left: .8rem;
+    font-family: "sfMono";
+    font-size: .9rem;
+    color: var(--secondary);
+
+}
+
+
+.nav-items .nav-item-count a:hover {
+    color: var(--primary);
+
+}
+
+.button {
+    font-size: 1rem;
+    padding: .7rem 1rem;
+    margin-left: .8rem;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    background-color: transparent;
+    border-radius: 4px;
+    font-family: "sfMono";
+}
+
+.button:hover {
+    background-color: rgba(55, 255, 140, 0.171);
+    cursor: pointer;
+}
+
+
+
+
+/* ---------- Navbar End ---------- */
+
+
+
+/* ---------- right Social icon ---------- */
+
+
+.right-icon {
+    width: 10%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+}
+
+
+.left-email {
+    width: 10%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    bottom: 0;
+    right: 0;
+}
+
+.email {
+    rotate: 90deg;
+    margin-bottom: 14rem;
+    font-size: 2.2rem;
+    font-family: "cSemibold";
+    color: var(--secondary);
+    transition: transform .15s ease;
+}
+
+.email:hover{
+    transform: translateX(-.3rem);
+    color: var(--primary);
+}
+
+.right-icon a .fa-brands {
+    font-size: 1.8rem;
+    color: var(--secondary);
+    transition: transform .15s ease;
+}
+
+.right-icon a .fa-brands:hover{
+    transform: translateY(-.3rem);
+ color: var(--primary);
+}
+
+.right-icon a .fa-twitter {
+    margin-bottom: 1.5rem;
+}
+
+.line {
+    width: 1px;
+    height: 7rem;
+    background-color: white;
+}
+
+
+
+
+
+
+/* ---------- Main Css start ---------- */
+
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  justify-content: center;
+
+}
+
+.content {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-direction: column;
+}
+
+
+.content .section {
+    width: 60%;
+    padding-top: 18rem;
+}
+
+
+.content .home .details p:nth-child(1) {
+    color: var(--primary);
+
+    font-family: "sfMono";
+}
+
+.content .home .details h1:nth-child(2) {
+    color: var(--namesecondary);
+    font-size: 4.8rem;
+    margin-top: .5rem;
+}
+
+.content .home .details h1:nth-child(3) {
+    color: var(--secondary);
+    font-size: 4.2rem;
+
+}
+
+.content .home .details p:nth-child(4) {
+    color: var(--secondary);
+    width: 40%;
+    margin-top: 1rem;
+    text-justify: auto;
+    letter-spacing: .02rem;
+}
+
+.content .home .details p:nth-child(5) {
+    color: var(--secondary);
+    margin-top: .8rem;
+    letter-spacing: .02rem;
+}
+
+.content .home .details button {
+
+    margin: 2.5rem 0 0 0;
+}
+
+
+
+
+
+/* ---------- About section ---------- */
+
+
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+
+}
+
+.title {
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.title a {
+    margin-left: 2rem;
+    font-size: 2rem;
+    font-family: "sfMono";
+}
+
+.section-title {
+    margin-bottom: 1.5rem;
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+
+.section-title .title a {
+    position: relative;
+    font-size: 1.6rem;
+}
+
+.section-title .title a::before {
+    content: "";
+    width: 2px;
+    background-color: var(--namesecondary);
+    right: -11rem;
+    top: -9rem;
+    height: 20rem;
+    position: absolute;
+    rotate: 90deg;
+}
+
+.about-details {
+    width: 62%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.about-details p {
+    color: var(--secondary);
+    line-height: 1.6rem;
+    text-justify: auto;
+    letter-spacing: .02rem;
+    font-size: 1.1rem;
+}
+
+
+
+.photo-container .photo img {
+    width: 16rem;
+    aspect-ratio: 1;
+    position: relative;
+    border-radius: 5px;
+    transition: transform .1s ease-in-out;
+}
+
+.photo-container .photo:hover img {
+    transform: translate(-.3rem ,-.3rem);
+}
+
+.photo-container .photo:hover::before{
+    transform: translate(.3rem ,.3rem);
+}
+
+
+
+
+.photo-container .photo {
+    position: relative;
+}
+
+.photo-container .photo::before {
+    content: "";
+    position: absolute;
+    border: 2px solid var(--primary);
+    left: 8px;
+    border-radius: 5px;
+    top: 8px;
+    width: 16rem;
+    aspect-ratio: 1;
+    transition: transform .1s ease-in-out;
+}
+
+.lang-grid {
+    display: flex;
+    gap: 2rem;
+   
+}
+
+.col .lang {
+    position: relative;
+    margin-left: .2rem;
+    font-size: .9rem;
+    font-family: "sfMono";
+}
+
+.col .lang::before {
+    content: "▹";
+    left: 0;
+    color: var(--primary);
+}
+
+
+.about-container .about-details .skills{
+    color: var(--primary);
+    margin-bottom: -15px;
+    margin-left: 10px;
+}
+
+
+
+
+
+/* ---------------- Experience css ---------------- */
+
+.project {
+    margin-top: 8rem;
+}
+
+.card {
+    display: flex;
+
+}
+
+.img {
+    position: relative;
+}
+
+.img::before {
+    content: "";
+    background-color: var(--card-color);
+    z-index: 2;
+    top: 0;
+    left: 0;
+    border: 1px solid var(--primary);
+    width: 100%;
+    opacity: .4;
+    height: 100%;
+    position: absolute;
+    border-radius: 5px;
+    transition: background-color .5s ease-in;
+}
+
+.img:hover::before {
+    background-color: transparent;
+
+}
+
+
+
+.img img {
+    width: 500px;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-end;
+    position: relative;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+.project-content .outline {
+    font-family: "sfMono";
+    font-size: .8rem;
+    color: var(--primary);
+}
+
+
+.project-content .title {
+    margin-top: -.6rem;
+    color: var(--namesecondary);
+    font-size: 2rem;
+}
+
+.project-content .detail {
+    text-justify: auto;
+    text-align: end;
+    width: 110%;
+    background-color: var(--card-color);
+    padding: 1rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-family: "cregular";
+    z-index: 10;
+    color: var(--secondary);
+}
+
+.tech-stack {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    font-size: 1rem;
+    font-family: "cRegular";
+    color: var(--secondary);
+}
+
+.links {
+    display: flex;
+    gap: 1rem;
+
+}
+
+.links i {
+    font-size: 1.2rem;
+}
+
+.links i:hover {
+    color: var(--primary);
+}
+
+
+
+/* ----------- projects other css------------- */
+
+
+.project1 {
+    margin-top: 4rem;
+}
+
+.project2 .project-content {
+    align-items: flex-start;
+}
+
+
+.project2 .project-content .detail {
+    text-align: start;
+}
+
+
+
+
+/* -----------------------  some other projects css started ------------------------ */
+
+
+.project-title {
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-title .title {
+    font-size: 2rem;
+    color: var(--namesecondary);
+    font-family: "cSemibold";
+}
+
+.project-title .archive {
+    color: var(--primary);
+    font-family: "sfMono";
+    font-size: .8rem;
+}
+
+
+
+
+/* ------------------------ small projects grid --------------------- */
+
+.more-project-grid {
+    display: flex;
+    margin-top: 4rem;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+
+
+.cards {
+    width: 290px;
+    background-color: var(--card-color);
+    transition: transform .1s ease-in-out;
+}
+
+.cards:hover {
+    transform: translateY(-.6rem);
+}
+
+.cards:hover .inner-detail .title {
+    color: var(--primary);
+}
+
+.inner-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+}
+
+.inner-card .icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.inner-card .icons img {
+    width: 35px;
+}
+
+.inner-card .links a i {
+    color: var(--secondary);
+}
+
+.inner-card .links a i:hover {
+    color: var(--primary);
+}
+
+
+.inner-detail {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+
+.inner-detail  .title {
+    margin-top: .4rem;
+    font-size: 1.4rem;
+    font-family: "cSemibold";
+    color: var(--namesecondary);
+}
+
+.inner-detail .detail {
+    color: var(--secondary);
+    line-height: 1.4rem;
+}
+
+.inner-detail .tech-stack {
+    font-family: "sfMono";
+    font-size: .8rem;
+    margin-top: .6rem;
+}
+
+
+.show-btn {
+    margin-top: 4rem;
+    font-size: .8rem;
+}
+
+
+
+
+
+/* ------------------- contact section css ------------------- */
+
+
+.contact-container {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+
+.contact-container .title a,
+.title {
+    font-size: 1.2rem;
+    color: var(--primary);
+}
+
+.contact-container .getInTouch {
+    font-size: 4rem;
+    color: var(--namesecondary);
+}
+
+.contact-container .opportunity {
+    text-align: center;
+    color: var(--secondary);
+    font-size: 1.2rem;
+}
+
+.contact-container .sayHello {
+    margin-top: 3rem;
+}
+
+
+/* ------------------------ footer section ---------------------- */
+
+
+.footer-container {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .4rem;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.footer-container a {
+    font-size: .8rem;
+    color: var(--secondary);
+    font-family: "sfMono";
+}
+
+.footer-container a:nth-child(2) {
+    margin-bottom: 3rem;
+}
+
+
+
+
+
+
+
+/* ////// ---------------------- Responsiveness -------------------- //////// */
+
+
+/* //              Mobile           */
+
+@media (max-width: 480px) {
+
+    .side {
+        display: none;
+    }
+    
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+    body {
+        background-color: rgb(151, 22, 22);
+    }
+    
+    .side {
+        display: none;
+    }
+   
+
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        background-color: blue;
+    }
+}
